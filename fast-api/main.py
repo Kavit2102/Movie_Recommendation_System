@@ -46,6 +46,9 @@ def get_recommendations(movie_name: str):  # Recommend movies based on a title l
     recommended_movies = [movies.iloc[i[0]].to_dict() for i in top_movies]  # Convert matched movie rows to dictionaries
     return recommended_movies  # Return the final recommendation list
 
+@app.get("/")
+def default_route():
+    return {"health": "ok"}
 
 @app.get("/movies")
 def get_movies():
