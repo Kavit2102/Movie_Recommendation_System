@@ -32,7 +32,7 @@ export function RecommendationProvider({ children }: { children: ReactNode }) {
 
         try {
             const response = await fetch(
-                `http://127.0.0.1:8000/recommend?movie_name=${encodeURIComponent(movieName)}`,
+                `movie-recommendation-system-server-seven.vercel.app/recommend?movie_name=${encodeURIComponent(movieName)}`,
                 {
                     method: "GET",
                     headers: {
