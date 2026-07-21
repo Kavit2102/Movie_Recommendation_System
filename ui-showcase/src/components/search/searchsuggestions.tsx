@@ -22,7 +22,7 @@ export function SearchSuggestions() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-            })
+            });
 
             const data = await movies.json()
             setmovies(data.movies)

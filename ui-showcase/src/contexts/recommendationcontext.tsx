@@ -39,7 +39,7 @@ export function RecommendationProvider({ children }: { children: ReactNode }) {
                         "Content-Type": "application/json",
                     },
                 }
-            )
+            );
 
             if (!response.ok) {
                 throw new Error("Failed to fetch recommendations")
