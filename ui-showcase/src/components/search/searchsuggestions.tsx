@@ -17,7 +17,7 @@ export function SearchSuggestions() {
 
     async function searchMovieList() {
         try {
-            const movies = await fetch(`movie-recommendation-system-server-seven.vercel.app/movies`, {
+            const movies = await fetch(`https://movie-recommendation-system-server-seven.vercel.app/movies`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
