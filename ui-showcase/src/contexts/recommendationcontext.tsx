@@ -41,10 +41,6 @@ export function RecommendationProvider({ children }: { children: ReactNode }) {
                 }
             );
 
-            if (!response.ok) {
-                throw new Error("Failed to fetch recommendations")
-            }
-
             const data = await response.json()
             setSimilarMovies((data?.recommendations ?? []) as MovieRecommendation[])
         } catch (err) {
